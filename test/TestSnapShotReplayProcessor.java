@@ -80,6 +80,7 @@ public class TestSnapShotReplayProcessor {
         Disposable disposable3 = s.subscribe(s1 -> {
             logger.info("Subscription3 = {}", s1);
             sub3Count[0]++;
+            Assert.assertEquals(s1.get("LastPrice"),"10");
         });
 
 
